@@ -173,7 +173,7 @@ The large negative percentages in 3rd down conversions may highlight major losse
 uva football game stats:https://virginiasports.com/football-stats/
 individual game stats:https://cfbstats.com/2024/team/746/thirddown/offense/gamelog.html
 enemy game stats: https://cfbstats.com/2024/team/746/thirddown/defense/gamelog.html
-github URL:
+github URL:https://github.com/wng8zw/stat3080-project-part1.git
  (d) If you used AI to produce any portion of any file in your repository, you must
  provide attribution in accordance with UVA guidelines
  
