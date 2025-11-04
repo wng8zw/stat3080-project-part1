@@ -1,0 +1,14 @@
+Date,Opponent,Surface,Result,EnemyAttempts,EnemyConversions,EnemyConversionPercent
+08/31/24,Richmond,Grass,W 34-13,15,3,20.00
+09/07/24,Wake Forest,Turf,W 31-30,15,5,33.33
+09/14/24,Maryland,Grass,L 13-27,19,8,42.11
+09/21/24,Coastal Carolina,Turf,W 43-24,13,4,30.77
+10/05/24,Boston College,Grass,W 24-14,13,6,46.15
+10/12/24,Louisville,Grass,L 20-24,10,3,30.00
+10/19/24,Clemson,Grass,L 31-48,15,9,60.00
+10/26/24,North Carolina,Grass,L 14-41,14,7,50.00
+11/09/24,Pittsburgh,Grass,W 24-19,13,4,30.77
+11/16/24,Notre Dame,Turf,L 14-35,12,1,8.33
+11/23/24,SMU,Grass,L 7-33,14,8,57.14
+11/30/24,Virginia Tech,Grass,L 17-37,13,6,46.15
+Totals,,,,166,64,38.55
