@@ -31,7 +31,38 @@ Q2: Does attendance influence average amount of points scored by both teams?
 
 Q3: Does UVA convert a lower proportion of 3rd downs than their opponents?
 
+## Data Summary:
+ (a) If the data represent a population, explain how the data were collected.
+ (b) If the data represent a sample, explain how the data were selected and collected.
+ (c) Explain any data modifications after collection and the reasons behind these changes.
+ (d) Discuss potential issues with the data and their possible impact.
+ (e) Explain why the data are appropriate to answer the research question.
 
+## Exploratory Analysis:
+(a) Include at least two numerical and two graphical summaries.
+ (b) Display all of the chosen summaries in this section and within the 7-page report
+ limit.
+ (c) Appropriately label and title all elements of all graphical summaries.
+ (d) Numerical summaries can be displayed graphically by displaying the numeric
+ values on a corresponding graphic. Two summaries combined in this way are
+ considered two of the four summaries.
+ (e) Create all summaries in R and all graphical summaries using ggplot2.
+  (f) Do NOT perform any statistical inference.
+## Conclusions: 
+(a) Interpret the chosen summaries and make initial conclusions based on the infor
+mation displayed in them.
+ (b) Interpret the values, trends, and patterns displayed in the chosen summaries sta
+tistically.
+ (c) Explain what the values, trends, and patterns displayed in the chosen summaries
+ may mean or imply in the context of the question.
+ (d) Summarize the conclusions in the context of the topic of interest.
+ \newpage.
+## References:
+ (a) This section is not considered part of the 7-page report length limit.
+ (b) Begin this section on a new page.
+ (c) Include sources used for background research and the data sources.
+ (d) If you used AI to produce any portion of any file in your repository, you must
+ provide attribution in accordance with UVA guidelines
 Linebreaks are created using two spaces at the end of the previous line of text, or using the command \newline.  
 Pagebreaks are created using the command \newpage.  
 Note: These commands execute when knitting, moving the end-of-sentence period in the resulting PDF.
@@ -41,6 +72,8 @@ Note: These commands execute when knitting, moving the end-of-sentence period in
 ## This R code will not be printed in the PDF.
 ## Remove the ## before all code.
 ```
+
+
 
 ```{r}
 ## R code to conduct the test in part 2.
