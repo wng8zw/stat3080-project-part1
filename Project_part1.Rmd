@@ -85,11 +85,12 @@ iqr_summary <- full_data %>%
   summarise(IQR_UVA_Score = IQR(UVA_Score, na.rm=TRUE))
 
 # Graphical summary 1: Boxplot of UVA_Score by Location with IQR values annotated
-ggplot(full_data, aes(x=Location, y=UVA_Score)) +
+HomeVAway <- ggplot(full_data, aes(x=Location, y=UVA_Score)) +
   geom_boxplot() +
   geom_text(data = iqr_summary, aes(x=Location, y=max(full_data$UVA_Score, na.rm=TRUE), label = paste("IQR:", round(IQR_UVA_Score, 1))), inherit.aes=FALSE, vjust=-0.5) +
   labs(title = "Boxplot of UVA Scores by Game Location", x = "Game Location", y = "UVA Score")
-
+ggsave("plots/HomeVAway.png", plot = HomeVAway, width = 6, height = 4)
+HomeVAway
 
 # Graphical Summary 2: attendance vs score
 
@@ -105,12 +106,14 @@ full_data <- full_data %>%
   mutate(Total_Score = UVA_Score + Opponent_Score)
 
 # Plot Attendance vs Total Score
-ggplot(full_data, aes(x = Attendance, y = Total_Score)) +
+AttendVScore <- ggplot(full_data, aes(x = Attendance, y = Total_Score)) +
   geom_point(color = "blue", size = 3) +
   geom_text(aes(label = Total_Score), nudge_y = 2, size = 3) +  # Add numbers above points
   labs(title = "Attendance vs Total Points Scored",
        x = "Attendance",
        y = "Total Points (UVA + Opponent)")
+ggsave("plots/AttendanceVScore.png", plot = AttendVScore, width = 6, height = 4)
+AttendVScore
 
 # Graphical Summary 3: Difference in 3rd Down Conversion %: UVA minus Opponents
 plot_data <- full_data %>%
@@ -123,9 +126,9 @@ full_data <- full_data %>%
   mutate(DifferencePercent = ConversionPercent - EnemyConversionPercent)
 
 # Plot Difference over time (by Date)
-ggplot(full_data, aes(x = Date, y = DifferencePercent)) +
-  geom_line(color = "purple", size = 1) +
-  geom_point(color = "purple", size = 3) +
+ThirdDownConversion <-ggplot(full_data, aes(x = Date, y = DifferencePercent)) +
+  geom_line(color = "pink", size = 1) +
+  geom_point(color = "pink", size = 3) +
   geom_text(aes(label = round(DifferencePercent, 1)), nudge_y = -5, size = 3) +  # numbers above points for numerical summary
   geom_hline(yintercept = 0, linetype = "dashed", color = "gray") +
   labs(title = "Difference in 3rd Down Conversion %: UVA minus Opponents",
@@ -133,8 +136,8 @@ ggplot(full_data, aes(x = Date, y = DifferencePercent)) +
        y = "Difference in Conversion Percentage") +
   theme_minimal() +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
-
-
+ggsave("plots/3rdDownConversion.png", plot = ThirdDownConversion, width = 6, height = 4)
+ThirdDownConversion
 
 ```
 ## Conclusions: 
