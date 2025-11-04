@@ -1,0 +1,13 @@
+Date,Opponent,Location,Result,UVA_Score,Opponent_Score,Overall_Record,Conf_Record,Game_Time_Minutes,Attendance
+2024-08-31,Richmond,Home,W,34,13,1-0,0-0,289,40811
+2024-09-07,Wake Forest,Away,W,31,30,2-0,1-0,216,30012
+2024-09-14,Maryland,Home,L,13,27,2-1,1-0,201,41352
+2024-09-21,Coastal Carolina,Away,W,43,24,3-1,1-0,197,22104
+2024-10-05,Boston College,Home,W,24,14,4-1,2-0,184,38285
+2024-10-12,Louisville,Home,L,20,24,4-2,2-1,206,32688
+2024-10-19,Clemson,Away,L,31,48,4-3,2-2,200,80100
+2024-10-26,North Carolina,Home,L,14,41,4-4,2-3,190,44550
+2024-11-09,Pittsburgh,Away,W,24,19,5-4,3-3,200,56693
+2024-11-16,Notre Dame,Away,L,14,35,5-5,3-3,207,77622
+2024-11-23,SMU,Home,L,7,33,5-6,3-4,195,36305
+2024-11-30,Virginia Tech,Away,L,17,37,5-7,3-5,195,65632
