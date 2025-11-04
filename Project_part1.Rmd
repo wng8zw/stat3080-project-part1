@@ -21,9 +21,16 @@ knitr::opts_chunk$set(echo = TRUE, highlight=FALSE)
 ## Remove the ## before all code.
 ```
 
-## Section headers 
+## Introduction
 ### Subsection headers, if using
-Your text.
+Q1:Does UVA away games have more variablity vs home games
+get scores from all games, then compare home vs away in one season
+
+Q2: Does attendance influence average amount of points scored by both teams? 
+
+
+Q3: Does UVA convert a lower proportion of 3rd downs than their opponents?
+
 
 Linebreaks are created using two spaces at the end of the previous line of text, or using the command \newline.  
 Pagebreaks are created using the command \newpage.  
