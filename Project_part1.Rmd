@@ -23,11 +23,13 @@ knitr::opts_chunk$set(echo = TRUE, highlight=FALSE)
 
 ## Introduction
 ### Subsection headers, if using
+UVA Football. The pride and joy of many students here, something that students look forward to each week after a rough week of classes, finals, and life tasks, especially when it’s a home game. The initial question we will explore is whether the team shows greater variability in points scored during home games compared to away games, which indicates whether the team performs consistently or shows more frequent fluctuations in scoring depending on where they play. This brings us to our next question of whether attendance influences the number of points scored by both teams, splitting each game into 4 groups based off attendance amount and comparing. This helps identify if fans cheering for the teams truly does hype up the players and allow for more points to be scored. Lastly, we want to explore the potential weakness of our team and see if our 3rd down conversion rate is lower than our opponent’s. This may help determine where our offense crumbles. 
+
 Q1:Does UVA away games have more variablity vs home games
 get scores from all games, then compare home vs away in one season
-
+game_stats.txt
 Q2: Does attendance influence average amount of points scored by both teams? 
-
+game_stats.txt
 
 Q3: Does UVA convert a lower proportion of 3rd downs than their opponents?
 
@@ -58,11 +60,21 @@ tistically.
  (d) Summarize the conclusions in the context of the topic of interest.
  \newpage.
 ## References:
+
+uva football game stats:https://virginiasports.com/football-stats/
+individual game stats:https://cfbstats.com/2024/team/746/thirddown/offense/gamelog.html
  (a) This section is not considered part of the 7-page report length limit.
  (b) Begin this section on a new page.
  (c) Include sources used for background research and the data sources.
  (d) If you used AI to produce any portion of any file in your repository, you must
  provide attribution in accordance with UVA guidelines
+ 
+You should include a URL to your team's repository in your report. The URL for the data set that you include in the references section should not be the raw URL within your team's repo. Rather, this URL should be where you downloaded (or scraped) the data set from.
+
+If you used Gen AI to produce any portion of any file in your team's repository, then you must provide attribution in accordance with UVA guidelines.
+
+
+
 Linebreaks are created using two spaces at the end of the previous line of text, or using the command \newline.  
 Pagebreaks are created using the command \newpage.  
 Note: These commands execute when knitting, moving the end-of-sentence period in the resulting PDF.
