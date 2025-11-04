@@ -67,7 +67,7 @@ third_downs_enemy$Date <- as.Date(third_downs_enemy$Date, format = "%m/%d/%y")  
 # Select relevant columns and rename for clarity
 third_downs_subset <- third_downs %>% select(Date, Opponent, Attempts, Conversions, ConversionPercent)
 third_downs_enemy_subset <- third_downs_enemy %>% 
-  select(Date, Opponent, EnemyAttempts = Attempts, EnemyConversions = Conversions, EnemyConversionPercent = ConversionPercent)
+  select(Date, Opponent, EnemyAttempts, EnemyConversions, EnemyConversionPercent)
 
 # Merge UVA and Opponent third downs first by Date and Opponent
 conversion_compare <- merge(third_downs_subset, third_downs_enemy_subset, by = c("Date", "Opponent"))
@@ -91,7 +91,7 @@ ggplot(full_data, aes(x=Location, y=UVA_Score)) +
   labs(title = "Boxplot of UVA Scores by Game Location", x = "Game Location", y = "UVA Score")
 
 
-# Graphical Summary 2
+# Graphical Summary 2: attendance vs score
 
 # Reshape the data to long format with scores stacked
 long_data <- full_data %>%
@@ -112,12 +112,28 @@ ggplot(full_data, aes(x = Attendance, y = Total_Score)) +
        x = "Attendance",
        y = "Total Points (UVA + Opponent)")
 
+# Graphical Summary 3: Difference in 3rd Down Conversion %: UVA minus Opponents
+plot_data <- full_data %>%
+  select(Date, Opponent, ConversionPercent, EnemyConversionPercent) %>%
+  pivot_longer(cols = c(ConversionPercent, EnemyConversionPercent),
+               names_to = "Team", values_to = "ConversionPercent")
 
-# Graphical summary 3: Dot plot of ConversionPercent by game (Date)
-ggplot(full_data, aes(x=factor(Date), y=ConversionPercent)) +
-  geom_point(color = "darkgreen", size=3) +
-  labs(title = "3rd Down Conversion % Per Game", x = "Game Date", y = "Conversion Percent") +
-  theme(axis.text.x = element_text(angle = 45, hjust=1))
+# Numerical Summary 2: Calculate difference: UVA - Opponent conversion percentage
+full_data <- full_data %>%
+  mutate(DifferencePercent = ConversionPercent - EnemyConversionPercent)
+
+# Plot Difference over time (by Date)
+ggplot(full_data, aes(x = Date, y = DifferencePercent)) +
+  geom_line(color = "purple", size = 1) +
+  geom_point(color = "purple", size = 3) +
+  geom_text(aes(label = round(DifferencePercent, 1)), nudge_y = -5, size = 3) +  # numbers above points for numerical summary
+  geom_hline(yintercept = 0, linetype = "dashed", color = "gray") +
+  labs(title = "Difference in 3rd Down Conversion %: UVA minus Opponents",
+       x = "Game Date",
+       y = "Difference in Conversion Percentage") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
 
 
 ```
