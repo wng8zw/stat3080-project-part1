@@ -22,7 +22,6 @@ knitr::opts_chunk$set(echo = TRUE, highlight=FALSE)
 ```
 
 ## Introduction
-### Subsection headers, if using
 UVA Football. The pride and joy of many students here, something that students look forward to each week after a rough week of classes, finals, and life tasks, especially when it’s a home game. The initial question we will explore is whether the team shows greater variability in points scored during home games compared to away games, which indicates whether the team performs consistently or shows more frequent fluctuations in scoring depending on where they play. This brings us to our next question of whether attendance influences the number of points scored by both teams, to see if there is any trend in fan support. This helps identify if fans cheering for the teams truly does hype up the players and allow for more points to be scored. Lastly, we want to explore the potential weakness of our team and see if our 3rd down conversion rate is lower than our opponent’s. This may help determine where our offense crumbles. 
 
 Q1:Does UVA away games have more variablity vs home games
@@ -41,16 +40,8 @@ Q3: Does UVA convert a lower proportion of 3rd downs than their opponents?
  (e) Explain why the data are appropriate to answer the research question.
 
 ## Exploratory Analysis:
-(a) Include at least two numerical and two graphical summaries.
- (b) Display all of the chosen summaries in this section and within the 7-page report
- limit.
- (c) Appropriately label and title all elements of all graphical summaries.
- (d) Numerical summaries can be displayed graphically by displaying the numeric
- values on a corresponding graphic. Two summaries combined in this way are
- considered two of the four summaries.
- (e) Create all summaries in R and all graphical summaries using ggplot2.
   (f) Do NOT perform any statistical inference.
-```{r}
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
 library(ggplot2)
 library(dplyr)
 library(tidyr)
@@ -72,14 +63,12 @@ third_downs_enemy_subset <- third_downs_enemy %>%
 # Merge UVA and Opponent third downs first by Date and Opponent
 conversion_compare <- merge(third_downs_subset, third_downs_enemy_subset, by = c("Date", "Opponent"))
 
-# Optionally merge with game_stats if needed
 full_data <- merge(game_stats, conversion_compare, by = c("Date", "Opponent"))
+```
 
+```{r, echo=FALSE}
 
-# View the merged dataframe
-print(full_data)
-
-# numerical summary:
+# Numerical summary:
 iqr_summary <- full_data %>%
   group_by(Location) %>%
   summarise(IQR_UVA_Score = IQR(UVA_Score, na.rm=TRUE))
@@ -92,7 +81,7 @@ HomeVAway <- ggplot(full_data, aes(x=Location, y=UVA_Score)) +
 ggsave("plots/HomeVAway.png", plot = HomeVAway, width = 6, height = 4)
 HomeVAway
 
-# Graphical Summary 2: attendance vs score
+# Graphical Summary 2: Attendance vs Total Score
 
 # Reshape the data to long format with scores stacked
 long_data <- full_data %>%
@@ -105,7 +94,6 @@ long_data <- full_data %>%
 full_data <- full_data %>%
   mutate(Total_Score = UVA_Score + Opponent_Score)
 
-# Plot Attendance vs Total Score
 AttendVScore <- ggplot(full_data, aes(x = Attendance, y = Total_Score)) +
   geom_point(color = "blue", size = 3) +
   geom_text(aes(label = Total_Score), nudge_y = 2, size = 3) +  # Add numbers above points
@@ -137,7 +125,6 @@ ThirdDownConversion <-ggplot(full_data, aes(x = Date, y = DifferencePercent)) +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
 ggsave("plots/3rdDownConversion.png", plot = ThirdDownConversion, width = 6, height = 4)
 ThirdDownConversion
-
 ```
 ## Conclusions: 
 (a) Interpret the chosen summaries and make initial conclusions based on the information displayed in them.
@@ -166,27 +153,23 @@ The large negative percentages in 3rd down conversions may highlight major losse
  
  UVA actually scores more points in away games, with a higher variability in scoring compared to home games, making potentially more "exciting" games to be not at home. Attendance does not effect scoring for teams, showing fan presence is not a major enough factor for offensive forces. Lastly, our 3rd down conversion was lower than the enemy 8/12 games played, which shows that it can impact the outcome of a game. We lost 5/8 of those games when we had a lower conversion rate and is 5/7 of the games we lost. This may show that 3rd down conversion rates can impact UVA's winning chances in games. These insights could inform coaching adjustments, game preparation strategies, and future performance evaluations.
  
- \newpage.
-## References:
+\newpage
+## References
 
-uva football game stats:https://virginiasports.com/football-stats/
-individual game stats:https://cfbstats.com/2024/team/746/thirddown/offense/gamelog.html
-enemy game stats: https://cfbstats.com/2024/team/746/thirddown/defense/gamelog.html
+UVA football game stats:https://virginiasports.com/football-stats/
+
+
+each game stats:https://cfbstats.com/2024/team/746/thirddown/offense/gamelog.html
+
+
+each enemy game stats: https://cfbstats.com/2024/team/746/thirddown/defense/gamelog.html
+
+
 github URL:https://github.com/wng8zw/stat3080-project-part1.git
+
+
  (d) If you used AI to produce any portion of any file in your repository, you must
  provide attribution in accordance with UVA guidelines
- 
-
-Linebreaks are created using two spaces at the end of the previous line of text, or using the command \newline.  
-Pagebreaks are created using the command \newpage.  
-Note: These commands execute when knitting, moving the end-of-sentence period in the resulting PDF.
-
-```{r, echo=FALSE}
-## R code to create and display summaries in part 1. 
-## This R code will not be printed in the PDF.
-## Remove the ## before all code.
-```
-
 
 
 ```{r}
