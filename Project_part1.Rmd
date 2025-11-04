@@ -23,7 +23,7 @@ knitr::opts_chunk$set(echo = TRUE, highlight=FALSE)
 
 ## Introduction
 ### Subsection headers, if using
-UVA Football. The pride and joy of many students here, something that students look forward to each week after a rough week of classes, finals, and life tasks, especially when it’s a home game. The initial question we will explore is whether the team shows greater variability in points scored during home games compared to away games, which indicates whether the team performs consistently or shows more frequent fluctuations in scoring depending on where they play. This brings us to our next question of whether attendance influences the number of points scored by both teams, splitting each game into 4 groups based off attendance amount and comparing. This helps identify if fans cheering for the teams truly does hype up the players and allow for more points to be scored. Lastly, we want to explore the potential weakness of our team and see if our 3rd down conversion rate is lower than our opponent’s. This may help determine where our offense crumbles. 
+UVA Football. The pride and joy of many students here, something that students look forward to each week after a rough week of classes, finals, and life tasks, especially when it’s a home game. The initial question we will explore is whether the team shows greater variability in points scored during home games compared to away games, which indicates whether the team performs consistently or shows more frequent fluctuations in scoring depending on where they play. This brings us to our next question of whether attendance influences the number of points scored by both teams, to see if there is any trend in fan support. This helps identify if fans cheering for the teams truly does hype up the players and allow for more points to be scored. Lastly, we want to explore the potential weakness of our team and see if our 3rd down conversion rate is lower than our opponent’s. This may help determine where our offense crumbles. 
 
 Q1:Does UVA away games have more variablity vs home games
 get scores from all games, then compare home vs away in one season
@@ -141,18 +141,25 @@ ThirdDownConversion
 
 ```
 ## Conclusions: 
-(a) Interpret the chosen summaries and make initial conclusions based on the infor
-mation displayed in them.
- (b) Interpret the values, trends, and patterns displayed in the chosen summaries sta
-tistically.
+(a) Interpret the chosen summaries and make initial conclusions based on the information displayed in them.
+Interestingly, the away games have a higher scoring average, whereas the home games score less, as evident by the box plot. The higher variability indicates that we are more unpredictable in how much we score in away games. Lastly, our home games seem to be more tightly clustered around an overall lower score count in games.
+
+In the plot of attendance vs total points scored, games with low and high attendance saw higher point totals, with the more middle of the pack attendance counts clustered around lower total points. This may indicate the type of game to expect and how the matchup is expected to turn out.
+
+In the 3rd down conversions, 4 games out of 12 do we have a better rate of 3rd down conversions compared to the other time. Of those 4, only 2 were above 15%. Of the 8 games where we had a worse conversion percent, 3 of the games were by more than 15%, with one being by 37.1%. There seems to be no improvement/worsening in conversion percent the later the season went.
+ (b) Interpret the values, trends, and patterns displayed in the chosen summaries statistically.
+Notably the medians are over 10 points apart, which is a touchdown and a field goal worth of points. But, the variability in away games is slightly more, as depicted by a roughly 2.4 difference in IQR between the two. Lastly, the whiskers in the box plot are higher and lower for away games, showing that away games had a higher amount of points and the highest amount of points in their lowest scoring game.
+
  (c) Explain what the values, trends, and patterns displayed in the chosen summaries
  may mean or imply in the context of the question.
  (d) Summarize the conclusions in the context of the topic of interest.
+ 
  \newpage.
 ## References:
 
 uva football game stats:https://virginiasports.com/football-stats/
 individual game stats:https://cfbstats.com/2024/team/746/thirddown/offense/gamelog.html
+enemy game stats: https://cfbstats.com/2024/team/746/thirddown/defense/gamelog.html
  (a) This section is not considered part of the 7-page report length limit.
  (b) Begin this section on a new page.
  (c) Include sources used for background research and the data sources.
