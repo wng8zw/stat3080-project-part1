@@ -24,24 +24,16 @@ Does attendance influence the amount of average points scored by both teams?
 
 Does UVA convert a lower proportion of 3rd downs than their opponents? 
 
-The initial question we will explore is whether the team shows greater variability in points scored during home games compared to away games, which indicates whether the team performs consistently or shows more frequent fluctuations in scoring depending on where they play. This brings us to our next question of whether attendance influences the number of points scored by both teams, to see if there is any trend in fan support. This helps identify if fans cheering for the teams truly does hype up the players and allow for more points to be scored. Lastly, we want to explore the potential weakness of our team and see if our 3rd down conversion rate is lower than our opponent’s. This may help determine where our offense crumbles. 
+The initial question we will explore is whether the team shows greater variability in points scored during away games, which indicates fluctuations in scoring depending on where they play. This brings us to our next question of whether attendance influences the number of points scored by both teams, to see if there is any trend in fan support and team performance. This helps identify if the fans' presence has an influence on points scored. Lastly, we want to explore the potential weakness of our team and see if our 3rd down conversion rate is lower than our opponent’s, which may expose a possible area of improvement in the football problems. 
 
 ## Data Summary:
- (a) If the data represents a population, explain how the data were collected.  
+ This data is representative of a population of all UVA Football games from the 2024 season. It was collected during each game and uploaded to the UVA Athletics website. The third-down results were collected from the official UVA Athletics NCAA game statistics and box scores. As the NCAA tracks play-by-play outcomes, our data is recorded directly from the in-game tracking systems, which generate a full population of games for the season. The scoring totals and attendance numbers were also taken from this legitamate source. 
 
-This data is representative of a population of all UVA Football games from the 2024 season. It was collected during each game and uploaded to the UVA Athletics website. The third-down results were collected from the official UVA Athletics official NCAA game statitics and box scores. As NCAA tracks play--by-play outcomes our data is recorded directsly from the in game tracking systems, which generate a full populatio of games for the season.  
+After downloading the data from the UVA Athletics webpage, no alterations to the original play-by-play data were made. The data were organized into simplified formats for the total game statistics, third-down attempts, and conversions. The clean, game-to-game summaries make comparisons easier when attempting to analyze the season’s results. 
 
-(c) Explain any data modifications after collection and the reasons behind these changes. 
+Although the data is descriptive, there are still uncaptured details of each game. First, injuries, weather, and field conditions are not included or accounted for. These confounding variables may play a role in the team’s performance, but our data has no way of showing that. Secondly, the data used in this project only covers the 2024 season, meaning the results cannot be generalized to team data from other years. 
 
-After downloading the data from the UVA athletics webpage no alterations to the original play-by-play data were made. The data were organized into a simplified formats for the total game statistics, third-down attempts, and conversions. The clean game to game summaries make comparisons easier when attempting to analyze the seasons resultes.  
-
-(d) Discuss potential issues with the data and their possible impact. 
-
-Although the data is descriptive there are still uncaptured details of each game. First, injusries, weather, and field conditions are not included or accounted for. These confounding variables may play a role in the teams performance, but our data has no way of showing that. Secondly the data this project uses is only of the 2024 season. Meaning the results cannot be genaralized to team data of other years. 
-
-(e) Explain why the data are appropriate to answer the research question. 
-
- This dataset includes the research question because they measure the variables in the research question. Third-down attempts within the data allow us to calculate conversion percentages so that we can compare performance across all games, and game outcomes. The metric of third-down efficiency is a meaningful metric, because drive plays a large role in football success. Since the data is complete, unbiased, and recorded using legitimate NCAA measurements, it is reliable for statistical analysis. 
+This dataset includes the variables in the research question. Third-down attempts within the data allow us to calculate conversion percentages so that we can compare performance across all games and game outcomes. The metric of third-down efficiency is meaningful because drive plays a large role in football success. Since the data is complete, unbiased, and recorded using legitimate NCAA measurements, it is reliable for statistical analysis. With the data organized and merged, we moved onto the exploratory data analysis to examine numerical and graphical summaries. 
 
 ## Exploratory Analysis:
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
