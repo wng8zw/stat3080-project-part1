@@ -171,7 +171,6 @@ UVA actually scores more points in away games, with a higher variability in scor
 ## References
 
 
-
 cfbstats.com - 2024 Virginia Cavaliers Third Down Conversion Defense Game Log. (2024). Cfbstats.com. https://cfbstats.com/2024/team/746/thirddown/defense/gamelog.html
 
 cfbstats.com - 2024 Virginia Cavaliers Third Down Conversion Offense Game Log. (2024). Cfbstats.com. https://cfbstats.com/2024/team/746/thirddown/offense/gamelog.html
@@ -207,13 +206,5 @@ long_data <- full_data %>%
                names_to = "Team",
                values_to = "Score")
 
- (d) If you used AI to produce any portion of any file in your repository, you must
- provide attribution in accordance with UVA guidelines
 
-
-```{r}
-## R code to conduct the test in part 2.
-## This R code will be printed in the PDF.
-## Remove the ## before all code.
-```
 
