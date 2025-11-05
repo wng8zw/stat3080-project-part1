@@ -29,7 +29,7 @@ The initial question we will explore is whether the team shows greater variabili
 ## Data Summary:
  This data is representative of a population of all UVA Football games from the 2024 season. It was collected during each game and uploaded to the UVA Athletics website. The third-down results were collected from the official UVA Athletics NCAA game statistics and box scores. As the NCAA tracks play-by-play outcomes, our data is recorded directly from the in-game tracking systems, which generate a full population of games for the season. The scoring totals and attendance numbers were also taken from this legitimate source. 
 
-After downloading the data from the UVA Athletics webpage, no alterations to the original play-by-play data were made. The data were organized into simplified formats for the total game statistics, third-down attempts, and conversions. The clean, game-to-game summaries make comparisons easier when attempting to analyze the season’s results. 
+After downloading the data from the UVA Athletics webpage, no alterations to the original play-by-play data were made. The data were organized into simplified formats for the total game statistics, third-down attempts, and conversions. The clean, game-to-game summaries make comparisons easier when attempting to analyze the season’s results. After looking through the data, we chose only the data that we'd be using, that being the attendance, if a game is home or away, result of game, and score. All this data was in the first table in the full data set, and only had to find data for third down conversions for each game in the season, where we used the table set given and took the attempts, conversions, and conversion percentage. We modified their date format to make sure it was similar to all data sets then merged these data sets for use. 
 
 Although the data is descriptive, there are still uncaptured details of each game. First, injuries, weather, and field conditions are not included or accounted for. These confounding variables may play a role in the team’s performance, but our data has no way of showing that. Secondly, the data used in this project only covers the 2024 season, meaning the results cannot be generalized to team data from other years. 
 
@@ -37,8 +37,6 @@ This dataset includes the variables in the research question. Third-down attempt
 
 ## Exploratory Analysis:
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
-## Use this chunk for reading in packages.
-## Use this chunk for reading in the data, combining the data, and any other major data cleaning that is not relevant to show.
 library(ggplot2)
 library(dplyr)
 library(tidyr)
@@ -134,7 +132,7 @@ The 80,000+ attendee game may be an outlier and skew a perception that higher at
 
 The range in percentages is from -37.1 to 25, signifying a high volatility and variance. There was a decent streak of 3 games between September and October, starting with the 19.2 percent, which may signify a reason for good performance in those games. The standard deviation here appears to be very high.  
 
-c. Our initial question addressed, and there is more variability within away games, but surprisingly also higher scoring. This may show that there is more motivation for the players and a shift in mindset that occurs in AWAY games. 
+c. Our initial question addressed that there is more variability within away games, but surprisingly also higher scoring. This may show that there is more motivation for the players and a shift in mindset that occurs in AWAY games. 
 
 In the attendees versus points scored, a potential reason for how the relationship turned out could be accounted for by other factors such as strength of opponent, football legacy, rivalries, and weather. If looking purely at strength of opponent, you can find a pattern that there is a lot of points scored in less attended events because the other team is a lot worse, which means less fans, and in the more attended events you can expect more points because the other team is a lot better, meaning more fans. This data does not exactly answer our question but rather shows that many factors account for higher points and attendance amounts. 
 
