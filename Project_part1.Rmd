@@ -27,7 +27,7 @@ Does UVA convert a lower proportion of 3rd downs than their opponents?
 The initial question we will explore is whether the team shows greater variability in points scored during away games, which indicates fluctuations in scoring depending on where they play. This brings us to our next question of whether attendance influences the number of points scored by both teams, to see if there is any trend in fan support and team performance. This helps identify if the fans' presence has an influence on points scored. Lastly, we want to explore the potential weakness of our team and see if our 3rd down conversion rate is lower than our opponent’s, which may expose a possible area of improvement in the football problems. 
 
 ## Data Summary:
- This data is representative of a population of all UVA Football games from the 2024 season. It was collected during each game and uploaded to the UVA Athletics website. The third-down results were collected from the official UVA Athletics NCAA game statistics and box scores. As the NCAA tracks play-by-play outcomes, our data is recorded directly from the in-game tracking systems, which generate a full population of games for the season. The scoring totals and attendance numbers were also taken from this legitamate source. 
+ This data is representative of a population of all UVA Football games from the 2024 season. It was collected during each game and uploaded to the UVA Athletics website. The third-down results were collected from the official UVA Athletics NCAA game statistics and box scores. As the NCAA tracks play-by-play outcomes, our data is recorded directly from the in-game tracking systems, which generate a full population of games for the season. The scoring totals and attendance numbers were also taken from this legitimate source. 
 
 After downloading the data from the UVA Athletics webpage, no alterations to the original play-by-play data were made. The data were organized into simplified formats for the total game statistics, third-down attempts, and conversions. The clean, game-to-game summaries make comparisons easier when attempting to analyze the season’s results. 
 
@@ -181,5 +181,5 @@ long_data <- full_data %>%
                names_to = "Team",
                values_to = "Score")
 
-
+Ray: ChatGPT 5 model was used for grammatical mistakes in our writing and analysis. 
 
