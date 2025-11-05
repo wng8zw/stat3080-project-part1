@@ -183,5 +183,7 @@ long_data <- full_data %>%
                names_to = "Team",
                values_to = "Score")
 
-Ray: ChatGPT 5 model was used for grammatical mistakes in our writing and analysis. 
+Ray Santiago query: ChatGPT – 11/4, 12:15 PM 
+
+"can you read through these paragraphs and eliminate any grammatical mistakes WITHOUT adding your ai language, if there are additions you feel I should make after you consider the instructions i attached. 
 
